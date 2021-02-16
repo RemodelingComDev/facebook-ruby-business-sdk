@@ -69,7 +69,7 @@ module FacebookAds
 
       def is_facebook_error(error)
         error.backtrace.any? { |frame|
-          frame.match? 'facebook_ads'
+          frame.match(/facebook_ads/)
         } if error
       end
 
